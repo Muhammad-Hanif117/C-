@@ -7,7 +7,7 @@ class Perusahaan_Manfactur
             Console.Write("Masukkan jumlah murid : ");
             int m = Convert.ToInt32(Console.ReadLine());
             print(9, "");//---
-            if (9 >= 9)
+            if (9 <= 9)
             {
 
             }
