@@ -29,7 +29,7 @@ class Proges
         }
     }
 
-    class Prog_1 : Pengembangan_Logic_Basic_cls
+    class Prog_1 : Pengembangan_Logic_Basic_cls//Inherintance
     {
         public static double[] a = new double[2] { 2, 2 },c,f,f1;
         public static object yo = 1.0;
