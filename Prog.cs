@@ -5,7 +5,8 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Timers;
 using Microsoft.VisualBasic;
-using static Pengembangan_Logic.Pengembangan_Logic_Basic_cls.Toko_Buah;
+using  static Pengembangan_Logic.Pengembangan_Logic_Basic_cls.Toko_Buah;
+using static Sekolah_nmspc.Sekolah_cls;
 
 class Proges
 {
@@ -71,15 +72,6 @@ class Proges
             //? maxim = (T)Convert.ChangeType(max,typeof(decimal)) : max = (object)Convert.ChangeType(max,typeof(decimal)),typeof(object));
         }*/
 
-        public static object Pangkat_Brooo(object nilai,object value)
-        {
-            for (int i = Convert.ToInt32(value); i >= 1 ; i--)
-            {
-                nilai = Convert.ToDecimal(nilai) *  Convert.ToDecimal(nilai);
-            }
-            return Convert.ToDecimal(nilai);
-        }
-
         public static object Max_Math(params object[] max)
         {
             for (int i = 0; i < max.Length; i++)
@@ -105,56 +97,59 @@ class Proges
         public static int squer(int input) => input * input;
         public delegate int juju(int valup);
         //juju jii = 9(9);
-        
+      
         public static void Main()
         {   try
             {
-            object ooll;
-            Sikit_Sikit_Wiko_Sikit_Sikit_Waimo oio = squer;
-            var poi = oi(interface_.ios,2,(x) => x*x);//oi(System.Console.WriteLine,9);// Max_Math(0,9,99,999);
-            //object kp = Convert.ChangeType(lpl,typeof(object));
-            System.Console.WriteLine(poi);
-            Console.WriteLine("Penghitungan Laba Kotor\n-------------------------------------");
-            Console.WriteLine("Hal - hal umum yang harus dimasukkan");
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("1.Biaya Bahan Baku\n2.Biaya Tenaga Kerja Langsung\n3.Biaya Overhead Langsung\n4.dll");//Masukkan Sendiri
-            Console.Write("Masukkan Banyaknya Biaya: ");
-            c = new double[Convert.ToInt32(Console.ReadLine())];
-           
-            for (int i = 0; i < c.Length; i++)
-            {
-                Console.Write($"Masukkan biaya ke {i+1} : ");
-                c[i] = Convert.ToDouble(Console.ReadLine());
-            }
-            Input.Input_Produk();
-            //Proses.Proses_Produk();
-            /*foreach (var item in Proses.Proses_Laba_Kotor(c))
-            {
-                System.Console.WriteLine($"{item}");
-            }*/
-            Console.WriteLine();
-            Console.WriteLine("Penghitungan Laba Bersih\n-------------------------------------");
-            Console.WriteLine("Hal - hal umum yang harus dimasukkan");
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("1.Biaya Operasional\n2.Biaya Depresiasi dan Amortisasi\n3.Pajak\n4.dll");//Masukkan Sendiri
-            //System.Console.WriteLine("Informasi\nPajak Harus Dimasukkan Dalam Rasio Persen");
-            Console.Write("Masukkan Var Banyaknya Biaya: ");
-            int op = Convert.ToInt32(Console.ReadLine());
-            f = new double[op];
-            
-            for (int i = 0; i < op; i++)
-            {
+              
+                Pilih();
+                System.Console.WriteLine("Masukkan Segitiga : ");
+                object ooll;
+                Sikit_Sikit_Wiko_Sikit_Sikit_Waimo oio = squer;
+                var poi = oi(interface_.ios,2,(x) => x*x);//oi(System.Console.WriteLine,9);// Max_Math(0,9,99,999);
+                //object kp = Convert.ChangeType(lpl,typeof(object));
+                System.Console.WriteLine(poi);
+                Console.WriteLine("Penghitungan Laba Kotor\n-------------------------------------");
+                Console.WriteLine("Hal - hal umum yang harus dimasukkan");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine("1.Biaya Bahan Baku\n2.Biaya Tenaga Kerja Langsung\n3.Biaya Overhead Langsung\n4.dll");//Masukkan Sendiri
                 Console.Write("Masukkan Banyaknya Biaya: ");
-                f1 = new double[Convert.ToInt32(Console.ReadLine())];
-                for (int j = 0; j < f1.Length; j++)
+                c = new double[Convert.ToInt32(Console.ReadLine())];
+            
+                for (int i = 0; i < c.Length; i++)
                 {
-                    System.Console.Write(":");
-                    f1[j] +=  Convert.ToDouble(Console.ReadLine());
+                    Console.Write($"Masukkan biaya ke {i+1} : ");
+                    c[i] = Convert.ToDouble(Console.ReadLine());
                 }
-                //f[i] = Convert.ToInt32(Console.ReadLine());
-            }
+                Input.Input_Produk();
+                //Proses.Proses_Produk();
+                /*foreach (var item in Proses.Proses_Laba_Kotor(c))
+                {
+                    System.Console.WriteLine($"{item}");
+                }*/
+                Console.WriteLine();
+                Console.WriteLine("Penghitungan Laba Bersih\n-------------------------------------");
+                Console.WriteLine("Hal - hal umum yang harus dimasukkan");
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine("1.Biaya Operasional\n2.Biaya Depresiasi dan Amortisasi\n3.Pajak\n4.dll");//Masukkan Sendiri
+                //System.Console.WriteLine("Informasi\nPajak Harus Dimasukkan Dalam Rasio Persen");
+                Console.Write("Masukkan Var Banyaknya Biaya: ");
+                int op = Convert.ToInt32(Console.ReadLine());
+                f = new double[op];
+                
+                for (int i = 0; i < op; i++)
+                {
+                    Console.Write("Masukkan Banyaknya Biaya: ");
+                    f1 = new double[Convert.ToInt32(Console.ReadLine())];
+                    for (int j = 0; j < f1.Length; j++)
+                    {
+                        System.Console.Write(":");
+                        f1[j] +=  Convert.ToDouble(Console.ReadLine());
+                    }
+                    //f[i] = Convert.ToInt32(Console.ReadLine());
+                }
 
-            System.Console.WriteLine(Proses.Proses_Laba_Bersih(f1));//0. *Biaya Operasional  1. *Biaya Depresiasi dan Amortisasi 2.Pajak
+                System.Console.WriteLine(Proses.Proses_Laba_Bersih(f1));//0. *Biaya Operasional  1. *Biaya Depresiasi dan Amortisasi 2.Pajak
 
 
             //interface_.Maxim(9);   
